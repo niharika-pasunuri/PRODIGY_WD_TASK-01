@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Beauty Bloom</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Lato:wght@600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <div class="logo">BEAUTY BLOOM</div>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#shop">Shop</a></li>
+        <li><a href="#book">Book a Makeover</a></li>
+        <li><a href="#packages">Bridal Packages</a></li>
+        <li><a href="#testimonials">Testimonials</a></li>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#cart" id="cart-link">Cart (<span id="cart-count">0</span>)</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="home" class="hero" style="background-image: url('hero-image.jpg');">
+    <div class="hero-content">
+      <h1>Where Beauty Meets Elegance</h1>
+      <p>Your perfect bridal look awaits.</p>
+      <a href="#shop" class="button">Shop Beauty Products</a>
+      <a href="#book" class="button">Book Your Bridal Makeup</a>
+    </div>
+  </section>
+
+  <!-- Shop Section -->
+  <section id="shop" class="shop">
+    <h2>Shop Beauty Products</h2>
+    <p>All your favorite makeup brands with MRP listed.</p>
+    <div class="product-grid">
+      <div class="product" data-id="1">
+        <img src="foundation.jpg" alt="Luxury Foundation">
+        <h3>Luxury Foundation</h3>
+        <p>MRP: ₹1051</p>
+        <button class="add-to-cart button">Add to Cart</button>
+      </div>
+      <div class="product" data-id="2">
+        <img src="Lipstick.jpg" alt="Lipstick">
+        <h3>Lipstick</h3>
+        <p>MRP: ₹599</p>
+        <button class="add-to-cart button">Add to Cart</button>
+      </div>
+      <div class="product" data-id="3">
+        <img src="Mascara.jpg" alt="Mascara">
+        <h3>Mascara</h3>
+        <p>MRP: ₹479</p>
+        <button class="add-to-cart button">Add to Cart</button>
+      </div>
+      <div class="product" data-id="4">
+        <img src="MAKEUP KIT.jpg" alt="MakeUp Kit">
+        <h3>MakeUp Kit</h3>
+        <p>MRP: ₹258</p>
+        <button class="add-to-cart button">Add to Cart</button>
+      </div>
+      <div class="product" data-id="5">
+        <img src="kajal+Eyeliner.jpg" alt="Kajal+Eye Liner">
+        <h3>Kajal+Eye Liner</h3>
+        <p>MRP: ₹169</p>
+        <button class="add-to-cart button">Add to Cart</button>
+      </div>
+      <div class="product" data-id="6">
+        <img src="NAILPOLISH.JPG" alt="Nail Polish">
+        <h3>Nail Polish</h3>
+        <p>MRP: ₹199</p>
+        <button class="add-to-cart button">Add to Cart</button>
+      </div>
+      <div class="product" data-id="7">
+        <img src="primer.jpg" alt="Primer">
+        <h3>Primer</h3>
+        <p>MRP: ₹249</p>
+        <button class="add-to-cart button">Add to Cart</button>
+      </div>
+      <div class="product" data-id="8">
+        <img src="sunscreen+moisturizer.jpg" alt="Sunscreen moisturizer">
+        <h3>Sunscreen moisturizer</h3>
+        <p>MRP: ₹399</p>
+        <button class="add-to-cart button">Add to Cart</button>
+      </div>
+      <div class="product" data-id="9">
+        <img src="lip gloss.jpg" alt="Lip Gloss">
+        <h3>Lip Gloss</h3>
+        <p>MRP: ₹129</p>
+        <button class="add-to-cart button">Add to Cart</button>
+      </div>
+      <div class="product" data-id="10">
+        <img src="brushes set with beauty blender.jpg" alt="Brushes&Blender">
+        <h3>Brushes&Blender</h3>
+        <p>MRP: ₹319</p>
+        <button class="add-to-cart button">Add to Cart</button>
+      </div>
+    </div>
+  </section>
+
+  <section id="cart" class="cart-section">
+    <h2>Your Cart</h2>
+    <div id="cart-items">
+      <p>No items in your cart yet.</p>
+    </div>
+    <button id="checkout-btn" class="button" style="display: none;">Proceed to Checkout</button>
+  </section>
+
+  <section id="checkout" class="checkout-section" style="display:none;">
+    <h2>Checkout</h2>
+    <form id="checkout-form">
+      <label for="address">Shipping Address:</label>
+      <textarea id="address" name="address" placeholder="Enter your shipping address" required></textarea>
+      <button type="submit" class="button">Complete Purchase</button>
+    </form>
+  </section>
+
+  <section id="book" class="book">
+    <h2>Book a Makeover</h2>
+    <form id="booking-form" class="booking-form">
+      <label for="name">Customer Name:</label>
+      <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+      
+      <label for="date">Select Date:</label>
+      <input type="date" id="date" name="date" required>
+
+      <label for="time">Select Time:</label>
+      <input type="time" id="time" name="time" required>
+
+      <label for="package">Choose Package:</label>
+      <select id="package" name="package">
+        <option value="luxury-bridal">Luxury Bridal Makeup</option>
+        <option value="classic-bridal">Classic Bridal Makeup</option>
+        <option value="bridesmaid">Bridesmaid Makeup</option>
+      </select>
+
+      <label for="contact-phone">Phone Number:</label>
+      <input type="tel" id="contact-phone" name="contact-phone" placeholder="Enter your phone number" required>
+
+      <button type="submit" class="button">Book Now</button>
+    </form>
+  </section>
+
+   <section id="packages" class="packages">
+    <h2>Bridal Packages</h2>
+    <div class="package">
+      <h3>Luxury Bridal Package</h3>
+      <p>Includes a makeup trial, on-location service, and premium products.</p>
+    </div>
+    <div class="package">
+      <h3>Classic Bridal Package</h3>
+      <p>Beautiful, traditional bridal makeup with an expert touch.</p>
+    </div>
+    <div class="package">
+      <h3>Bridesmaid Package</h3>
+      <p>Perfect for your bridesmaids with a coordinated, elegant look.</p>
+    </div>
+  </section>
+
+  <section id="testimonials" class="testimonials">
+    <h2>What Our Brides Say</h2>
+    <div class="testimonial">
+      <p>"Niharika made me feel like a queen on my wedding day. Her makeup skills are unmatched!" - Amulya.</p>
+    </div>
+    <div class="testimonial">
+      <p>"The Beauty Bloom transformed my entire bridal party beautifully. Highly recommend!"   -Sindhu.</p>
+    </div>
+  </section>
+
+  <section id="about" class="about">
+    <h2>About Us</h2>
+    <p>At The Beauty Bloom, we believe in making every bride look and feel their best. Our team, led by Niharika, specializes in creating personalized, stunning bridal looks that leave a lasting impression.</p>
+  </section>
+
+  <footer>
+    <p>Follow us on Instagram: <a href="https://www.instagram.com/beautybloom" target="_blank">@beautybloom</a></p>
+    <p>Contact Us: 8520883781</p>
+    <p>Sign up for our newsletter:</p>
+    <form id="newsletter-form">
+      <input type="email" placeholder="Enter your email" required>
+      <button type="submit" class="button">Subscribe</button>
+    </form>
+    <p>&copy; 2024 The Beauty Bloom. All Rights Reserved.</p>
+  </footer>
+
+  <script>
+    let cart = []; // Array to store cart items
+
+    // Products data (you could store this data dynamically from a database)
+    const products = [
+      { id: 1, name: 'Luxury Foundation', price: 1051 },
+      { id: 2, name: 'Lipstick', price: 599 },
+      { id: 3, name: 'Mascara', price: 479 },
+      { id: 4, name: 'MakeUp Kit', price: 258 },
+      { id: 5, name: 'Kajal+Eye Liner', price: 169 },
+      { id: 6, name: 'Nail Polish', price: 199 },
+      { id: 7, name: 'Primer', price: 249 },
+      { id: 8, name: 'Sunscreen moisturizer', price: 399 },
+      { id: 9, name: 'Lip Gloss', price: 129 },
+      { id: 10, name: 'Brushes&Blender', price: 319 }
+    ];
+
+    // Function to update the cart display
+    function updateCartDisplay() {
+      const cartCount = document.getElementById('cart-count');
+      const cartItemsContainer = document.getElementById('cart-items');
+      const checkoutBtn = document.getElementById('checkout-btn');
+      
+      // Update the cart count in the header
+      cartCount.textContent = cart.length;
+
+      // Clear current cart display
+      cartItemsContainer.innerHTML = '';
+
+      if (cart.length === 0) {
+        cartItemsContainer.innerHTML = '<p>No items in your cart yet.</p>';
+        checkoutBtn.style.display = 'none'; // Hide checkout button if cart is empty
+      } else {
+        // Display cart items
+        cart.forEach(item => {
+          const itemElement = document.createElement('div');
+          itemElement.classList.add('cart-item');
+          itemElement.innerHTML = `<p>${item.name} - ₹${item.price}</p>`;
+          cartItemsContainer.appendChild(itemElement);
+        });
+        checkoutBtn.style.display = 'inline-block'; // Show checkout button if cart has items
+      }
+    }
+
+    // Function to handle adding items to the cart
+    function addToCart(productId) {
+      const product = products.find(p => p.id === productId);
+      if (product) {
+        cart.push(product);
+        updateCartDisplay(); // Update the cart display
+      }
+    }
+
+    // Event listener for adding products to the cart
+    document.querySelectorAll('.add-to-cart').forEach(button => {
+      button.addEventListener('click', function(event) {
+        const productId = parseInt(event.target.closest('.product').getAttribute('data-id'));
+        addToCart(productId);
+      });
+    });
+
+    // Event listener for Proceed to Checkout button
+    document.getElementById('checkout-btn').addEventListener('click', () => {
+      document.getElementById('cart').style.display = 'none';
+      document.getElementById('checkout').style.display = 'block';
+    });
+
+    // Handle checkout form submission
+    document.getElementById('checkout-form').addEventListener('submit', (e) => {
+      e.preventDefault();
+      alert('Thank you for your purchase! Your order will be processed soon.');
+      cart = []; // Clear the cart after checkout
+      updateCartDisplay(); // Update cart display
+      document.getElementById('checkout').style.display = 'none'; // Hide checkout section
+    });
+  </script>
+</body>
+</html>
